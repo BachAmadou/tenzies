@@ -24,7 +24,7 @@ import Die from './components/Die';
     <div className="main">
       <div className="dice-container">
         {diceElements}
-        <button onClick={rollDice}>Roll Dice</button>
+        <button className="roll-dice" onClick={rollDice}>Roll</button>
       </div>
     </div>
   );
