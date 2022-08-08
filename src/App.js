@@ -9,12 +9,15 @@ import Die from './components/Die';
   function allNewDice() {
     const arrDice = [];
     for (let i = 0; i < 10; i++) {
-      arrDice.push(Math.floor(Math.random() * 6))
+      arrDice.push({
+        value: Math.floor(Math.random() * 6),
+        isHeld: false
+      })
     }
     return arrDice;
   }
 
-  const diceElements = dice.map(die => <Die value={die} />)
+  const diceElements = dice.map(die => <Die value={die.value} isHeld={die.isHeld} />)
 
   function rollDice() {
     setDice(allNewDice)
